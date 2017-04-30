@@ -1,0 +1,52 @@
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+ol.c {
+    list-style-type: upper-roman;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+}
+
+div.float_left {
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin-left: 10px;
+    }
+div.float_right {
+    float: right;
+     height: 100px;
+    width: 200px;
+    margin-right: 10px;
+    }
+
+li a {
+    display: block;
+    width: 60px;
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;

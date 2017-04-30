@@ -1,0 +1,373 @@
+<? require'site_header.php'; ?>
+  <style type="text/css">
+    
+    /****************************************************************************************************
+    Styles for the structure of this worksheet
+    ****************************************************************************************************/
+    
+    #wrapper_for_example {
+      font-size:11pt;
+      text-align:left;
+    }
+    
+    #wrapper_for_example fieldset {
+      margin: 0px 5px 15px 0px;  /*TRBL*/
+      border-color:#009;
+    }
+    #wrapper_for_example legend {
+      font-weight:bold;
+      color:#009;
+    }
+    
+    #wrapper_for_example div {
+      padding:5px;
+    }
+    
+    #wrapper_for_example code {
+      font-size:.8em;
+    }
+    
+    span.section_title {
+      font-weight:bold;
+    }
+    div.section {
+      margin: 0px 5px 5px 0px;  /*TRBL*/
+      border-top: 1px dotted #000 ;
+    }
+    
+    div.answer {
+      margin: 0px 5px 0px 10px;  /*TRBL*/
+      color:#009;
+    }
+    
+    /****************************************************************************************************
+    Styles for the Child Expansion Example
+    ****************************************************************************************************/
+    
+    div.parent {
+  	  margin: 5px 10px 5px 10px;  /*TRBL*/
+  	  border: 1px solid #000;
+  	  width:300px;
+  	  background-color:gray;
+  	}
+  	div.child {
+  	  margin: 5px 10px 5px 10px;  /*TRBL*/
+  	  border: 1px solid #000;
+  	  background-color:gray;
+  	}
+  	
+  	/****************************************************************************************************
+    Styles for the Adjacent Blocks Example
+    ****************************************************************************************************/
+  	div.left {
+  	  margin: 5px 10px 5px 10px;  /*TRBL*/
+  	  border: 1px solid #000;
+  	  width:300px;
+  	  background-color:gray;
+  	  float:left;
+  	}
+  	div.right {
+  	  margin: 5px 10px 5px 15px;  /*TRBL*/
+  	  border: 1px solid #000;
+  	  width:350px;
+  	  background-color:gray;
+  	  float:left;
+  	}
+  	
+  	/****************************************************************************************************
+    Styles for the Stacked Blocks Example
+    ****************************************************************************************************/
+  	
+  	div.above {
+  	  box-sizing: border-box;
+  	  margin: 5px 10px 25px 10px;  /*TRBL*/
+  	  border: 1px solid #000;
+  	  width:300px;
+  	  background-color:gray;
+  	}
+  	div.below {
+  	  box-sizing: border-box;
+  	  margin: 5px 10px 20px 10px;  /*TRBL*/
+  	  border: 1px solid #000;
+  	  width:300px;
+  	  background-color:gray;
+  	}
+  	
+  	/****************************************************************************************************
+    Styles for the Inline Blocks Example
+    ****************************************************************************************************/
+    a.button_link:link, a.button_link:visited {
+      display: inline-block;      
+      
+      background-color: #999999;
+      color: #FFFFFF;
+      padding: 15px;
+      text-align: center; 
+      text-decoration: none;
+      font-weight:bold;
+    }
+    
+    a.button_link:hover, a.button_link:active {
+      background-color: #666666;
+    }
+    
+    /****************************************************************************************************
+    Styles for the Curious Example
+    ****************************************************************************************************/
+    
+    div.curious {
+  	  margin: 0px;  /* No Margins! */
+  	  padding: 0px;  /* No padding! */
+  	  width:300px;
+  	  background-color:gray;
+  	}
+  	
+  	p.curious {
+  	  background-color:gray;
+  	}
+  	
+      /****************************************************************************************************
+    Styles for the Exercise
+    ****************************************************************************************************/
+      
+    div.parent_block {
+    background-color: gray;
+    border: 1px solid #000;
+    color: #00f;
+    cursor: crosshair;
+    text-align: center;
+    font-family: monospace;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0px;
+    padding: 10px;
+    width: 300px;
+}
+
+    div.child_block {
+    border: inherit;
+}  
+  </style>
+
+<body>
+  
+  <div id="wrapper_for_example">
+  
+    Make sure you examine the <a href="http://www.w3schools.com/css/css_boxmodel.asp">W3Schools Box Model Overview</a> before doing this assignment. 
+    <br><br>
+    
+    <span class="section_title">My Terminology:</span>
+    <div class="section" style="font-size:.75em;">
+      <b>Content Width</b> - Refers to the width of the content part of the block.
+      <br>
+      <b>Effective Width</b> - Refers to the "outer" or "complete" width of the block from left to right, including both margins.
+      <br>
+      <b>Visible Width</b> - Refers to what appears to the eye to be the width of the block.
+      <br>
+      &nbsp;&nbsp;&nbsp; For a block with borders, this is from the outside of left border to the outside of the right border.
+      <br>
+      &nbsp;&nbsp;&nbsp; For a block without borders, this is the width of the shaded background.
+      <br>
+      &nbsp;&nbsp;&nbsp; A block without border or shading would have no apparent visible width.
+    </div>
+    
+    <!--************************************************************************************-->
+    <fieldset>
+      <legend>Child Expansion Example</legend>
+      
+      <div class="parent">
+          <code>
+            border: 1px solid #000;<br>
+            padding:5px;<br>
+            width:300px;
+          </code>
+          <div class="child">
+            <code>
+              margin: 5px 10px 5px 10px; /*TRBL*/<br>
+              border: 1px solid #000;<br>
+              padding:5px;<br>
+            </code>
+          </div>
+      </div>
+      
+      <span class="section_title">Question:</span>
+      <div class="section">
+        What is the <i>visible width</i> of the parent block? Explain.
+        <div class="answer">
+          2px + 10px + 300px = 312px
+        </div>
+      </div>
+      
+      <span class="section_title">Question:</span>
+      <div class="section">
+        What determines how much the child block can expand horizontally? How about vertically?
+        <div class="answer">
+            horizontally expands as far as possible. Vertically collapses to minimum height of content.
+        </div>
+      </div>
+      
+      <span class="section_title">Question:</span>
+      <div class="section">
+        What is the <i>content width</i> of the child block? Explain.
+        <div class="answer">
+          300px (parent content width) - 20px (child margin) - 10px (child padding) - 2px (child border) = 268px
+        </div>
+      </div>
+  
+    </fieldset>
+    
+    <!--************************************************************************************-->
+    <fieldset>
+      <legend>Adjacent Blocks Example</legend>
+      
+      <div class="left">
+          <code>
+            margin: 5px 10px 5px 10px;  /*TRBL*/<br>
+            border: 1px solid #000;<br>
+            width:300px;<br>
+            padding:5px;<br>
+          </code>
+      </div>
+      <div class="right">
+        <code>
+          margin: 5px 10px 5px 15px;  /*TRBL*/<br>
+          border: 1px solid #000;<br>
+          width:350px;<br>
+          padding:5px;<br>
+        </code>
+      </div>
+      
+      <!-- This is a pretty standard tactic for clearing a float.  Other than that, this empty block doesn't effect anything. -->
+      <div style="clear:left;"></div>
+      
+      <span class="section_title">Question:</span>
+      <div class="section">
+        How much space is between the visible edges of the adjacent blocks? Explain.
+        <div class="answer">
+            15px (right block - left margin) + 10px (left block - right margin)= 25px
+        </div>
+      </div>
+      
+    </fieldset>
+    
+    <!--************************************************************************************-->
+    <fieldset>
+      <legend>Stacked Blocks Example</legend>
+      
+      <div class="above">
+          <code>
+            box-sizing: border-box;<br>
+            margin: 5px 10px 25px 10px;  /*TRBL*/<br>
+            border: 1px solid #000;<br>
+            width:300px;<br>
+            padding:5px;<br>
+          </code>
+      </div>
+      <div class="below">
+        <code>
+          box-sizing: border-box;<br>
+          margin: 5px 10px 20px 10px;  /*TRBL*/<br>
+          border: 1px solid #000;<br>
+          width:300px;<br>
+          padding:5px;<br>
+        </code>
+      </div>
+      
+      <span class="section_title">Question:</span>
+      <div class="section">
+        How much space is between the visible edges of the stacked blocks? Explain.
+        <div class="answer">
+            Collapses to the bottom larger margins - top box = 25px
+        </div>
+      </div>
+      
+      <span class="section_title">Question:</span>
+      <div class="section">
+        What is the <i>effective width</i> of the bottom block? Explain.
+        <div class="answer">
+            300px (box-sizing content width) + 20px (margin) = 320px
+        </div>
+      </div>
+      
+    </fieldset>
+    
+    <!--************************************************************************************-->
+    <fieldset>
+      <legend>Inline Blocks Example</legend>
+      
+      <a class="button_link" href="#">Button Link 1</a>
+      <a class="button_link" href="#">Button Link 2</a>
+      
+      <br><br>
+      
+      <span class="section_title">Question:</span>
+      <div class="section">
+        Why is there a blank space between the two button links above?  I am looking for a very specific answer that speaks about the specific behavior of inline blocks.
+        <div class="answer">
+            There is inline elements between the two links.
+        </div>
+      </div>
+      
+    </fieldset>
+    
+    <!--************************************************************************************-->
+    <fieldset>
+      <legend>Very Curious Example</legend>
+      
+      <div class="curious">
+        <p class="curious">What the hex going on?</p>
+      </div>
+      <div class="curious">
+        <p class="curious">Why all the vertical space?</p>
+      </div>
+      
+      <br><br>
+      
+      <span class="section_title">Question:</span>
+      <div class="section">
+        Exactly hom much vertical gray space is there between the white paragraphs?  Why?
+        <div class="answer">
+            10px (padding inherited from #wrapper_for_example div) + 5px (collapsed margin) = 15px
+        </div>
+      </div>
+      
+      <span class="section_title">Question:</span>
+      <div class="section">
+        Does this violate the principle of vertical collapsing margins?  Explain.
+        <div class="answer">
+            No, because only the container margin collapses.
+        </div>
+      </div>
+      
+    </fieldset>
+    
+    
+    <!--************************************************************************************-->
+    <fieldset>
+      <legend>Child Inheritance Example</legend>
+      
+      <span class="section_title">Exercise:</span>
+      <div class="section">
+        Make your own example. Create a parent div with the following style properties set: 
+        <br>
+        <code>background-color, border, color, cursor, text-align, font-family, font-style, font-weight, margin, padding, width</code>
+        <br>
+        Set the properties to something other than the defaults. For example, set text-align to something other than left and so forth.  Set large margins and padding (like 30px or more) so that they are obvious. List all the style properties inside the parent like I have done above in several of the examples.  
+        <br><br>
+        Put a child div inside the parent.  The <i>only</i> style property the child block should have set is border so that you can see its outline.  I|put a short description inside the child block to describe which style properties it inherited from the parent and which ones it did not.  Note that border is one property that will <b>not</b> inherit, so that’s why the child needs a distinct border so its outline will be apparent. 
+      </div>
+      
+      <!-- put your exercise here -->
+        <div class="parent_block">
+         parent block
+         <div class="child_block">
+            child block 
+            <br>
+            <code>border: 1px solid #000;</code>
+         </div>
+    </fieldset>
+    
+  </div> <!-- end of example wrapper -->
+</body>
+
+<? require'site_footer.php'; ?>

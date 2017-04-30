@@ -1,0 +1,391 @@
+<? require'site_header.php'; ?>
+  <style type="text/css">
+  
+    /****************************************************************************************************
+    Styles for the structure of this worksheet
+    ****************************************************************************************************/
+    
+    fieldset {
+      margin: 0px 5px 15px 0px;  /*TRBL*/
+      border-color: #009;
+      min-height: 50px;
+    }
+    
+    legend {
+      font-weight: bold;
+      color: #009;
+    }
+    
+    #example_wrapper {
+      position: relative;
+    }
+    
+    #example_wrapper div {
+      padding: 5px;
+      border: 1px solid #000;
+      background-color: gray;
+    }
+    
+    span.section_title, legend {
+      font-weight: bold;
+      text-align: left;
+    }
+    
+    #question {
+      margin: 0px 5px 5px 0px;  /*TRBL*/
+      border-top: 1px dotted #000;
+      background-color: gray;
+      text-align: left;
+      z-index: 3;
+    }
+    
+    section.answer {
+      margin: 0px 5px 0px 10px;  /*TRBL*/
+      background-color: gray;
+      color: #009;
+      text-align: left;
+    }
+    
+    /****************************************************************************************************
+    Styles for the Parent/Child Absolute Position Example
+    ****************************************************************************************************/
+    #parent {
+      margin: auto;
+  	  width: 500px;
+  	  height: 200px;
+  	}
+  	
+  	#child {
+  	  position: absolute;
+  	  top: 300px;
+  	  left: 500px;
+  	  height: 100px;
+  	  width: 100px;
+  	}
+    
+   #parent_2 {
+     position: relative;
+     margin: auto;
+  	  width: 500px;
+  	  height: 200px;
+  	}
+  	
+  	#child_2 {
+  	  position: absolute;
+  	  bottom: 10px;
+  	  right: 100px;
+  	  height: 100px;
+  	  width: 100px;
+  	}
+    /****************************************************************************************************
+    Styles for the Top/Bottom Relative Position Example
+    ****************************************************************************************************/
+    div.top {
+  	  width: 300px;
+      height: 75px;
+      position: relative;
+      top: -10px;
+      z-index: 2;
+  	}
+  	
+    #bottom1 {
+  	  width: 300px;
+      height: 75px;
+      position: relative;
+      top: -50px;
+      left: 20px;
+      z-index: 1;
+  	}
+  	}
+    
+    #bottom2 {
+  	  width: 300px;
+      height: 75px;
+      z-index: 1;
+  	}
+  	
+  	/****************************************************************************************************
+    Styles for the Four Absolute Positioned Blocks Example
+    ****************************************************************************************************/
+  	#absolute_wrapper {
+  	  position: relative;
+      min-height: 200px;
+  	}
+  	
+  	#absolute1 {
+  	  position: absolute;
+  	  top: 50px;
+  	  left: 50px;
+      width: 75px;
+      height: 75px;
+  	}
+  	
+  	#absolute2 {
+  	  position: absolute;
+  	  top: 100px;
+  	  left: 100px;
+      width: 75px;
+      height: 75px;
+  	}
+  
+  	#absolute3 {
+  	  position: absolute;
+  	  top: 50px;
+  	  left: 250px;
+      width: 75px;
+      height: 75px;
+  	}
+  	
+  	#absolute4 {
+  	  position: absolute;
+  	  top: 100px;
+  	  left: 100px;  
+      width: 75px;
+      height: 75px;
+  	}
+  	
+  	/****************************************************************************************************
+    Styles for the Child Stacking Example
+    ****************************************************************************************************/
+    
+    #parent1 {
+      position: relative;
+      z-index: 1;
+  	  height: 200px;
+  	}
+  	
+  	#parent2 {
+      position: relative;
+      z-index: 2;
+  	  height: 200px;
+  	}
+  	
+  	#child1 {
+  	  position: relative;
+  	  z-index: 100;
+  	  top: 15px;
+  	  left: 100px;
+  	  
+  	  height: 100px;
+  	  width: 100px;
+  	}
+  	
+  	#child2 {
+  	  position: relative;
+  	  z-index: 50;
+  	  top: -200px;
+  	  left: 110px;
+  	  
+  	  height: 100px;
+  	  width: 100px;
+  	}
+
+   #fixed1 {
+     position: fixed;
+     width: 50px;
+     height: 50px;
+     top: 0px;
+     left: 0px;
+     background-color: gray;
+    }
+    
+   #fixed2 {
+     position: fixed;
+     width: 50px;
+     height: 50px;
+     bottom: 0px;
+     right: 0px;
+     background-color: gray;
+    }
+    
+   #abs {
+     position: absolute;
+     width: 50px;
+     height: 50px;
+     top: 300px;
+     right: -25px;
+     background-color: gray;
+    }
+  </style>
+
+
+  <div id="fixed1">fixed #1</div>
+  <div id="fixed2">fixed #2</div>
+  <div id="abs">a<br />b<br />s</div>
+  <div id="example_wrapper">
+
+    <fieldset>
+      <legend>Task 1</legend>
+      Place two small <i>fixed</i> positioned blocks in this page.  Fix one to the left side of the browser's viewport near the top and one to the right of the viewport near the bottom. Make both blocks smallish with fixed dimensions (100x100 or whatever), give them background colors so they stand out clearly in the page, and put a brief explanation inside each one so I can tell at a glance which blocks they are.  
+    </fieldset>
+    
+    <fieldset>
+      <legend>Task 2</legend>
+      Place a small <i>absolutely</i> positioned block on the right side of this page, about 300px down from the top.  But only about 1/2 of the block is actually visible on the page, the other half being outside the browser's viewport. Make the block smallish with fixed dimensions (100x100 or whatever), give it a background color so it stands out clearly in the page, and put a brief explanation inside it. 
+    </fieldset>
+    
+    <br>
+    <div id="question">The parent and child blocks below are for Question 1.</div>
+    
+    <div id="parent">
+      Parent block
+      <div id="child">
+        Child Block
+      </div>
+    </div>
+  
+    <span class="section_title">Question 1</span>
+    <div id="question">
+      Resize the browser window horizontally (drag the lower right corner left and right) and observe that the above parent block moves back and forth since it is centered in the viewpoort. Even though the child block is inside the parent, and positioned absolutely, it doesn't move with the parent. Explain why.
+      <section class="answer">
+        The child is positioned absolutely to first non-static ancestor relatively.
+      </section>
+    </div>
+    
+    <br>
+    
+    <fieldset>
+      <legend>Task 3</legend>
+      Below this block, make a second copy of the above example with id values <i>parent2</i> and <i>child2</i> so that the child block always stays inside the parent and at the same location, roughly in the middle of the parent block.  <b>The child block must still have position:absolute.</b>
+    </fieldset>
+    
+    <div id="parent_2">
+      Parent block
+      <div id="child_2">
+        Child block
+      </div>
+    </div>
+ 
+     
+    <!--************************************************************************************-->
+    <br>
+    <div id="question">The Top and Bottom blocks below are for Question 2.</div>
+    
+    <div class="top">
+      Top block
+    </div>
+    <div id="bottom1">
+      Bottom 1 block
+    </div>
+    
+    <br>
+    
+    These blocks also go with Question 2.
+    <div class="top">
+      Top block
+    </div>
+    <div id="bottom2">
+      Bottom 2 block
+    </div>
+    
+    <br>
+    
+    <span class="section_title">Question 2</span>
+    <div id="question">
+      There are two top/bottom block examples above with <i>almost</i> identical styles.  Why is the bottom2 block not stacked on top of the top block, but the bottom1 block is? Both bottom blocks have the exact same top/left coordinates set in the CSS.
+      <section class="answer">
+        The bottom 2 block has static position. There is no effect on coordinate positioning.
+      </section>
+    </div>
+    
+    <br>
+    
+    <fieldset>
+      <legend>Task 4</legend>
+      Alter the above example as follows <b>without changing the HTML code</b>, just the CSS.  Tweak the top blocks by moving them up exactly 10 pixels.  That should make the top blocks cover up about half of the sentences above the top blocks. Then, make the top blocks appear underneath that text, so that the sentences appear about half on top of the top blocks.  Finally, make the bottom1 block stack underneath the top block.
+    </fieldset>
+    
+    <br>
+    
+    <!--************************************************************************************-->
+    <br>
+    <div id="question">The Absolute blocks below are for Questions 3, 4, and 5.</div>
+    <div id="absolute_wrapper">
+    
+      <div id="absolute1">
+        Absolute 1
+      </div>
+      <div id="absolute2">
+        Absolute 2
+      </div>
+      
+      <div id="absolute3">
+        Absolute 3
+        <div id="absolute4">
+          Absolute 4
+        </div>
+      </div>
+        
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    
+    <span class="section_title">Question 3</span>
+      <div id="question">
+        Absolute1 and Absolute3 have identical styles, except that Absolute3 is 200px more to the right.  Absolute2 and Absolute4 have exactly identical styles.  Explain whey Absolute2 and Absolute4 are positioned differently.  Explain precicely.
+        <section class="answer">
+          Absolute2 is positioned in relative to the wrapper and Absolute4 is positioned in relative to Absolute3. 
+        </section>
+      </div>
+      
+      <br>
+      
+      <span class="section_title">Question 4</span>
+      <div id="question">
+        What happens if the styles for the absolute_wrapper are removed (just remove the id value)? Same thing happens if you completely remove the absolute_wrapper block itself.  Explain precicely.
+        <section class="answer">
+          Absolute blocks are no longer relative to the absolute wrapper. Position is relative to the example wrapper.
+        </section>
+      </div>
+      
+      <br>
+      
+      <span class="section_title">Question 5</span>
+      <div id="question">
+        Absolute2 is on top of Absolute 1.  What is determining that stacking order?
+        <section class="answer">
+          The stacking order is determined by the order of its parent and absolute 2 appears later in the document order than absolute 1.
+        </section>
+      </div>
+      
+      <br>
+      
+      
+      <div id="question">The parent and child blocks below are for Question 6.</div>
+      
+      <div id="parent1">
+        Parent1 block
+        <div id="child1">
+          Child1 Block
+        </div>
+      </div>
+      
+      <br> 
+      
+      <div id="parent2">
+        Parent2 block
+        <br><br>
+        Child2 is actually a child of this block, it's just positioned outside of it.
+        <div id="child2">
+          Child2 Block
+        </div>
+      </div>
+      
+      <br>
+      
+      <span class="section_title">Question 6</span>
+      <div id="question">
+        The child1 block above has z-index of 100 and child2 has z-index of 50.  So it seems that child1 should be stacked on top of child1.  Why is it not?
+        <section class="answer">
+          Parent 2 has a higher z-index than Parent 1; therefore,  the children of Parent 2 will always appear above the children of Parent 1 no matter what z-indec the children has.
+        </section>
+      </div>
+      
+  </div>
+  
+      </div>
+   </div>
+       
+<? require'site_footer.php'; ?>
